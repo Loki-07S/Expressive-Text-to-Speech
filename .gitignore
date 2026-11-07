@@ -1,0 +1,46 @@
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+.mypy_cache/
+.ruff_cache/
+
+# Virtual environments (never upload these)
+.venv/
+venv/
+conda_env/
+
+# Secrets
+.env
+.env.*
+*.pem
+
+# OS / editor
+.DS_Store
+Thumbs.db
+desktop.ini
+.idea/
+.vscode/
+
+# Hugging Face / model caches
+.cache/
+**/huggingface/
+**/.cache/huggingface/
+
+# Vendor engine + multi-GB weights. Clone IndexTTS2 locally (see README).
+# Nested .git inside this folder would also upload as a broken submodule.
+index-tts/
+
+# IndexTTS weights are several GB — GitHub rejects files over 100 MB
+index-tts/.venv/
+index-tts/.cache/
+index-tts/checkpoints/*.pth
+index-tts/checkpoints/.cache/
+index-tts/checkpoints/qwen0.6bemo4-merge/
+index-tts/outputs/
+index-tts/output.wav
+index-tts/output_happy.wav
+index-tts/output_sad.wav
+
+# Bulk local generations (curated clips live in /samples)
+expressive_tts/outputs/
